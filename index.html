@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Normalize CSS instead of reset-->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- Bootstrap CDN Link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css"
+        integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css"
+        integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="manifest" href="manifest.json">
+    <title>M. Smiles</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div id="center" class="col-offset-0">
+
+                <h2 class="display-4">Matt. Smiles</h2>
+
+                <p class="justify-content-center">Dad - Paramedic - Paduwan Web Developer</p>
+                <!-- GitHub Link -->
+                <a href="https://github.com/mnrotrmedic"><i class="fab fa-github"></i></a>
+                <!-- LinkedIn Link -->
+                <a href="https://www.linkedin.com/in/matthew-smiles-b11210141/"><i class="fab fa-linkedin"></i></a>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container border-0">
+        <div class="row">
+            <div class="col" id="left-col">
+                <img src="./assets/images/jumbo_img.JPG" alt="Matt. Smiles" class="img-responsive border-0" width="80%">
+            </div>
+            <div class="col" id="right-col">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // This is the service worker with the Advanced caching
+
+        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+        // Check compatibility for the browser we're running this in
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("pwabuilder-sw.js", {
+                        scope: "./"
+                    })
+                    .then(function (reg) {
+                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

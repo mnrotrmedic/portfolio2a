@@ -1,0 +1,16 @@
+{"dir" : "ltr",
+    "lang" : "en",
+    "name" : "Matt. Smiles Portfolio",
+    "scope" : "/Portfolio2/",
+    "display" : "browser",
+    "start_url" : "https://mnrotrmedic.github.io/Portfolio2/",
+    "short_name" : "Smiles Portfolio",
+    "theme_color" : "transparent",
+    "description" : "Portfolio page hosted on github. Used for Web Developer Bootcamp",
+    "orientation" : "any",
+    "background_color" : "transparent",
+    "related_applications" : "",
+    "prefer_related_applications" : "false",
+    "generated" : "true",
+    "icons" : [
+    ]}
