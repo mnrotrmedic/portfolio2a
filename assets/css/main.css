@@ -1,13 +1,12 @@
 .jumbotron {
-    background-color: #ffffff;
+    background-color: #122d80;
+    color: #57a4ff
 }
 
-/* #center {
-    justify-content: center;
+/* #left-col {
+    background-color: #122d80
 } */
 
-#left-col {
-    background-color: green
+#right-col {
+    color: #ffffff
 }
-
-.bigFace {}
