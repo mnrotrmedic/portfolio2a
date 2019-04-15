@@ -39,10 +39,15 @@
 
             </div>
         </div>
-        <!-- </div> -->
+    </div>
 
-        <!-- <div class="container border-0"> -->
-        <div class="row">
+    <div class="container border-0">
+        <button class="tablink" onclick="openPage('Contact', this)">Contact</button>
+        <button class="tablink" onclick="openPage('About', this)" id="defaultOpen">About</button>
+        <button class="tablink" onclick="openPage('Portfolio', this)">Portfolio</button>
+
+
+        <div id="About" class="tabcontent">
             <div class="col" id="left-col">
                 <img src="./assets/images/img_ms_575x575.jpg" alt="Matt. Smiles" class="mx-auto" id="bigFace"
                     width="80%">
@@ -68,34 +73,55 @@
                 </p>
             </div>
         </div>
-    </div>
 
-    <hr>
+        <div id="Contact" class="tabcontent">
+
+            <p>
+                some cool stuff will go here (promise!)
+            </p>
+        </div>
+
+        <div id="Portfolio" class="tabcontent">
+            <div class="row">
+                <div class="col">
+                    <p>A project will go here</p>
+                </div>
+                <div class="col">
+                    <p>A project will go here</p>
+                </div>
+                <div class="col">
+                    <p>A project will go here</p>
+                </div>
+            </div>
+
+        </div>
 
 
 
-    <script>
-        // This is the service worker with the Advanced caching
 
-        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+        <script src="./assets/script/script.js"></script>
+        <script>
+            // This is the service worker with the Advanced caching
 
-        // Check compatibility for the browser we're running this in
-        if ("serviceWorker" in navigator) {
-            if (navigator.serviceWorker.controller) {
-                console.log("[PWA Builder] active service worker found, no need to register");
-            } else {
-                // Register the service worker
-                navigator.serviceWorker
-                    .register("pwabuilder-sw.js", {
-                        scope: "./"
-                    })
-                    .then(function (reg) {
-                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-                    });
+            // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+            // Check compatibility for the browser we're running this in
+            if ("serviceWorker" in navigator) {
+                if (navigator.serviceWorker.controller) {
+                    console.log("[PWA Builder] active service worker found, no need to register");
+                } else {
+                    // Register the service worker
+                    navigator.serviceWorker
+                        .register("pwabuilder-sw.js", {
+                            scope: "./"
+                        })
+                        .then(function (reg) {
+                            console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                        });
+                }
             }
-        }
 
-    </script>
+        </script>
 
 
 </body>
