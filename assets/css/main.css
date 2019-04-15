@@ -2,10 +2,12 @@
     background-color: #ffffff;
 }
 
-#center {
+/* #center {
     justify-content: center;
-}
+} */
 
 #left-col {
     background-color: green
 }
+
+.bigFace {}
