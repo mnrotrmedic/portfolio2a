@@ -39,95 +39,64 @@
 
             </div>
         </div>
+        <!-- </div> -->
+
+        <!-- <div class="container border-0"> -->
+        <div class="row">
+            <div class="col" id="left-col">
+                <img src="./assets/images/img_ms_575x575.jpg" alt="Matt. Smiles" class="mx-auto" id="bigFace"
+                    width="80%">
+                    <!-- TODO resize (down) and 'float' left -->
+            </div>
+            <div class="col" id="right-col">
+                <p>
+                    My name is Matt Smiles. I live in Central MN where I have worked in the Emergency Medical Transport
+                    industry for more than ten years. I have always had a strong interest in technology, especially the
+                    ability of technology to make life easier and to solve problems. I'm currently enrolled in a
+                    Bootcamp to become a Full-Stack Developer. I think this is a great way to become a small part of the
+                    tech industry and to help drive solutions, especially solutions for the Medical Transport industry.
+                </p>
+                <p>
+                    I am a dad to three. In the summertime I like to do simple woodworking projects in my garage. In the
+                    winter, I challenge myself with various tech related projects including moderately advanced
+                    networking, home automation & other simple electronics projects. It's a privilege to be asked by
+                    friends and family to help with their tech needs.
+                </p>
+                <p>
+                    Many of the current projects in my portfolio are assignments related to the Developer Bootcamp that
+                    I am attending. As I finish the course, I look forward to the showcasing other projects that
+                    demonstrate my abilities & passions.
+                </p>
+            </div>
+        </div>
     </div>
 
-    <div class="container border-0">
-        <button class="tablink" onclick="openPage('Contact', this)">Contact</button>
-        <button class="tablink" onclick="openPage('About', this)" id="defaultOpen">About</button>
-        <button class="tablink" onclick="openPage('Portfolio', this)">Portfolio</button>
+    <hr>
 
 
-        <div id="About" class="tabcontent">
-            <div class="col" id="left-col">
-                <img src="./assets/images/img_ms_575x575.jpg" alt="Matt. Smiles" class="mx-auto" id="bigFace"
-                    width="80%">
-            </div>
-            <div class="col" id="right-col">
-                <p>
-                    My name is Matt Smiles. I live in Central MN where I have worked in the Emergency Medical Transport
-                    industry for more than ten years. I have always had a strong interest in technology, especially the
-                    ability of technology to make life easier and to solve problems. I'm currently enrolled in a
-                    Bootcamp to become a Full-Stack Developer. I think this is a great way to become a small part of the
-                    tech industry and to help drive solutions, especially solutions for the Medical Transport industry.
-                </p>
-                <p>
-                    I am a dad to three. In the summertime I like to do simple woodworking projects in my garage. In the
-                    winter, I challenge myself with various tech related projects including moderately advanced
-                    networking, home automation & other simple electronics projects. It's a privilege to be asked by
-                    friends and family to help with their tech needs.
-                </p>
-                <p>
-                    Many of the current projects in my portfolio are assignments related to the Developer Bootcamp that
-                    I am attending. As I finish the course, I look forward to the showcasing other projects that
-                    demonstrate my abilities & passions.
-                </p>
-            </div>
 
-        </div>
-        <!-- <div class="row">
-            <div class="col" id="left-col">
-                <img src="./assets/images/img_ms_575x575.jpg" alt="Matt. Smiles" class="mx-auto" id="bigFace"
-                    width="80%">
-            </div>
-            <div class="col" id="right-col">
-                <p>
-                    My name is Matt Smiles. I live in Central MN where I have worked in the Emergency Medical Transport
-                    industry for more than ten years. I have always had a strong interest in technology, especially the
-                    ability of technology to make life easier and to solve problems. I'm currently enrolled in a
-                    Bootcamp to become a Full-Stack Developer. I think this is a great way to become a small part of the
-                    tech industry and to help drive solutions, especially solutions for the Medical Transport industry.
-                </p>
-                <p>
-                    I am a dad to three. In the summertime I like to do simple woodworking projects in my garage. In the
-                    winter, I challenge myself with various tech related projects including moderately advanced
-                    networking, home automation & other simple electronics projects. It's a privilege to be asked by
-                    friends and family to help with their tech needs.
-                </p>
-                <p>
-                    Many of the current projects in my portfolio are assignments related to the Developer Bootcamp that
-                    I am attending. As I finish the course, I look forward to the showcasing other projects that
-                    demonstrate my abilities & passions.
-                </p>
-            </div>
-        </div>
-    </div> -->
+    <script>
+        // This is the service worker with the Advanced caching
 
-        <hr>
+        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
 
-
-        <script src="./assets/script/script.js"></script>
-        <script>
-            // This is the service worker with the Advanced caching
-
-            // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-
-            // Check compatibility for the browser we're running this in
-            if ("serviceWorker" in navigator) {
-                if (navigator.serviceWorker.controller) {
-                    console.log("[PWA Builder] active service worker found, no need to register");
-                } else {
-                    // Register the service worker
-                    navigator.serviceWorker
-                        .register("pwabuilder-sw.js", {
-                            scope: "./"
-                        })
-                        .then(function (reg) {
-                            console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-                        });
-                }
+        // Check compatibility for the browser we're running this in
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("pwabuilder-sw.js", {
+                        scope: "./"
+                    })
+                    .then(function (reg) {
+                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                    });
             }
+        }
 
-        </script>
+    </script>
 
 
 </body>

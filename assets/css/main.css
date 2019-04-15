@@ -7,14 +7,18 @@
     background-color: #122d80
 } */
 
-#right-col {
+body {
     color: #ffffff;
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif
 }
 
+p {
+    text-indent: 3%;
+}
+
 .tablink {
-    background-color: #555;
-    color: white;
+    background-color: #122d80;
+    color: #57a4ff;
     float: left;
     border: none;
     outline: none;
