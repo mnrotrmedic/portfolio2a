@@ -3,9 +3,10 @@
     color: #57a4ff
 }
 
-/* #left-col {
-    background-color: #122d80
-} */
+.text {
+    /* background-color: #122d80; */
+    color: #57a4ff
+}
 
 body {
     color: #ffffff;
@@ -37,4 +38,14 @@ p {
     display: none;
     padding: 100px 20px;
     height: 100%;
+}
+
+.portfolioImage {
+    max-width: 300px;
+    width: 100%
+}
+
+.portfolioContainer {
+    width: 33%;
+    float: left
 }

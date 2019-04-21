@@ -23,12 +23,12 @@
 
 <body background="./assets/images/mosaic.png">
     <div class="container">
-        <div class="jumbotron jumbotron-fluid text-center">
+        <div class="jumbotron jumbotron-fluid text-center text">
             <div id="center" class="col-offset-0">
 
                 <h2 class="display-4">Matt. Smiles</h2>
 
-                <p class="justify-content-center">Dad - Paramedic - Paduwan Web Developer</p>
+                <p class="justify-content-center">Dad - Paramedic - Padawan Web Developer</p>
                 <!-- GitHub Link -->
                 <a href="https://github.com/mnrotrmedic"><i class="fab fa-github"></i></a>
                 <!-- LinkedIn Link -->
@@ -48,13 +48,13 @@
 
 
         <div id="About" class="tabcontent">
-            <div class="col" id="left-col">
+            <div class="col">
                 <img src="./assets/images/img_ms_575x575.jpg" alt="Matt. Smiles" class="mx-auto" id="bigFace"
-                    width="80%">
+                    width="60%">
             </div>
             <div class="col" id="right-col">
                 <p>
-                    My name is Matt Smiles. I live in Central MN where I have worked in the Emergency Medical Transport
+                    My name is Matt Smiles. I live in Central MN where I have worked in the emergency medical transport
                     industry for more than ten years. I have always had a strong interest in technology, especially the
                     ability of technology to make life easier and to solve problems. I'm currently enrolled in a
                     Bootcamp to become a Full-Stack Developer. I think this is a great way to become a small part of the
@@ -75,53 +75,94 @@
         </div>
 
         <div id="Contact" class="tabcontent">
-
-            <p>
-                some cool stuff will go here (promise!)
-            </p>
-        </div>
-
-        <div id="Portfolio" class="tabcontent">
             <div class="row">
-                <div class="col">
-                    <p>A project will go here</p>
+                <div class="col"></div>
+                <div class="col text">
+                    <h2>Phone</h2>
+                    <h4>320-321-9644</h4>
+                    <br>
+                    <h2>Email</h2>
+                    <h4>smilesmatt@gmail.com</h4>
+
                 </div>
-                <div class="col">
-                    <p>A project will go here</p>
-                </div>
-                <div class="col">
-                    <p>A project will go here</p>
-                </div>
+                <div class="col"></div>
             </div>
 
         </div>
 
+        <div id="Portfolio" class="tabcontent">
+            <div class="row">
+                <div class="col portfolioContainer">
+                    <img src="./assets/images/goals_screenshot_jpg.jpg" alt="#Goals" class="portfolioImage">
+                    <h4><a href="https://tranquil-lake-79374.herokuapp.com/">#Goals</a>
+                    </h4>
+                    <p>
+                        #Goals is the first 'Full-Stack' app and was a group project. This app was deployed to
+                        Heroku
+                        (link above) and used Express JS, node, a MySQL database, Sequelize ORM and was styled using
+                        Bulma, a CSS library. The team dynamic was great on this project but we learned early on
+                        that
+                        having too many hands in one Javascript file can lead to trouble. My primary role on this
+                        prject
+                        was writing the Express routes and related database calls using Sequelize.
+                    </p>
+                </div>
+
+                <div class="col portfolioContainer">
+                    <img src="./assets/images/ff_screenshot.jpg" alt="screenshot" class="portfolioImage">
+                    <h4><a href="https://friend-finder-fsf.herokuapp.com/survey">Friend Finder</a>
+                    </h4>
+                    <p>
+                        Friend Finder is a 'Full-Stack' app that uses Node JS and Express JS. A user responds to
+                        questions which then matches that user based on their similarity in score to other users. It's
+                        pretty basic and the questions came directly from the assignment. It was great building an app
+                        from the ground up that was deployable as a 'real' website though.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col portfolioContainer">
+                <img src="./assets/images/trn_sched.jpg" alt="screenshot" class="portfolioImage">
+                <h4><a href="https://mnrotrmedic.github.io/Train-Scheduler/">Train Scheduler</a>
+                </h4>
+                <p>
+                    The Train Scheduler app higlights the use of moment.js to make working with time data a bit
+                    easier. It also uses Google Firebase as a modular back-end service to house the database
+                    information. Firebase stores the 'train' information as it is entered while moment handles the
+                    math for everything else on the page.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
 
 
 
-        <script src="./assets/script/script.js"></script>
-        <script>
-            // This is the service worker with the Advanced caching
 
-            // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+    <script src="./assets/script/script.js"></script>
+    <script>
+        // This is the service worker with the Advanced caching
 
-            // Check compatibility for the browser we're running this in
-            if ("serviceWorker" in navigator) {
-                if (navigator.serviceWorker.controller) {
-                    console.log("[PWA Builder] active service worker found, no need to register");
-                } else {
-                    // Register the service worker
-                    navigator.serviceWorker
-                        .register("pwabuilder-sw.js", {
-                            scope: "./"
-                        })
-                        .then(function (reg) {
-                            console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-                        });
-                }
+        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+        // Check compatibility for the browser we're running this in
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("pwabuilder-sw.js", {
+                        scope: "./"
+                    })
+                    .then(function (reg) {
+                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                    });
             }
+        }
 
-        </script>
+    </script>
 
 
 </body>
